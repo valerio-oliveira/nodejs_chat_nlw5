@@ -12,23 +12,25 @@ import { v4 as uuid } from "uuid";
 class Setting{
 
     @PrimaryColumn()
-    id: string;
+    id?: string;
 
     @Column()
-    username: string;
+    username?: string;
 
     @Column()
-    chat: boolean;
+    chat?: boolean;
 
     @UpdateDateColumn()
-    updated_at: Date;
+    updated_at?: Date;
 
     @CreateDateColumn()
-    created_at: Date;
+    created_at?: Date;
 
     constructor() {
         if (!this.id) {
             this.id = uuid();
+        } else {
+
         }
     }
 }
