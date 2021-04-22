@@ -1,4 +1,6 @@
-import express, { response } from "express"; // método de chamada possível graças ao "ts-node-dev"
+import express from "express"; // método de chamada possível graças ao "ts-node-dev"
+
+import "./database";
 
 const app = express();
 const PORT = 3333;
