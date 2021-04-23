@@ -1,4 +1,4 @@
-# Projeto
+# Project
 
 Este projeto segue a trilha NodeJS do bootcamp NLW#5 promovido pela Rocketseat.
 O objetivo é criar uma API para uma Chat aplication.
