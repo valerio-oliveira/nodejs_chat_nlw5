@@ -11,6 +11,7 @@ Trabalharemos com Yarn para instalar as dependências, então o primeiro passo e
 
 ## Preparando o ambiente
 
+
 ### 1. Instalar Yarn
 
 1.1. Adicionar a Chave GPG
