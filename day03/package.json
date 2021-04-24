@@ -19,5 +19,7 @@
     "@types/express": "^4.17.11",
     "@types/uuid": "^8.3.0",
     "typescript": "^4.2.4"
-  }
+  },
+  "description": "Este projeto segue a trilha NodeJS do bootcamp NLW#5 promovido pela Rocketseat. O objetivo é criar uma API para uma Chat aplication.",
+  "author": ""
 }

@@ -20,7 +20,7 @@ export class CreateSettings1619053926407 implements MigrationInterface {
                         name: "chat",
                         type: "boolean",
                         default: true
-                    },
+                    },  
                     {
                         name: "updated_at",
                         type: "timestamp",
@@ -38,7 +38,6 @@ export class CreateSettings1619053926407 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable("settings");
     }
 
 }

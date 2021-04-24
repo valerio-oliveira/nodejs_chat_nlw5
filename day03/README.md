@@ -81,14 +81,14 @@ $ yarn add ts-node-dev
 
 Caso não possua o snap:
 '''bash
-sudo rm /etc/apt/preferences.d/nosnap.pref
-sudo apt update
-sudo apt install snapd
+$ sudo rm /etc/apt/preferences.d/nosnap.pref
+$ sudo apt update
+$ sudo apt install snapd
 '''
 
 Postman:
 '''bash
-sudo snap install postman
+$ sudo snap install postman
 '''
 
 ### 9. Instalar a extensão "Json Viewer" no Chrome (opcional)
@@ -97,51 +97,36 @@ sudo snap install postman
 https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh/related?hl=pt-BR
 '''
 
-## Codificando
+## Codificando - entidade exemplo
 
-### 1. Inserindo script para o ambiente de Dev
+### 1. Criar a migration
+
+Criar arquivo .ts da migration via terminal:
+
+'''bash
+$ yarn typeorm migration:create -n Create<EntidadeNoPlural>
+'''
+
+Implementar métodos up e down:
+
 '''json
-  "scripts": {
-    "dev": "ts-node-dev src/server.ts"
-  },
+
 '''
 
-### 2. Criando server.ts
+Executar a criação da migration:
 
-Criar a pasta "src", e dentro dela criar o arquivo "server.ts" com o seguinte conteúdo:
+```bash
+$ yarn typeorm migration:run
+```
 
-'''ts
-import express, { response } from "express"; // método de chamada possível graças ao "ts-node-dev"
 
-const app = express();
-const PORT = 3333;
+### 2. Create entity
 
-// Rotas
-/***
- * GET    : Busca
- * POST   : Cria
- * PUT    : Altera
- * DELETE : Exclui
- * PATCH  : Alterações específicas
- ***/
+### 3. Create repository
 
-app.get("/", (Request, response) => {
-    return response.json({
-        message: "Olá NLS 05!",
-    })
-})
-
-app.post("/", (Request, response) => {
-    return response.json({
-        message: "Usuário gravado com sucesso!",
-    })
-})
-
-// Inicializa aplicação
-app.listen(PORT, () => console.log("Server running on port ", PORT));
-'''
+### 4. Createv
 
 ### 3. Executanro a aplicação
 '''bash
-yarn bash
+yarn dev
 '''
