@@ -126,7 +126,9 @@ $ yarn typeorm migration:run
 
 ### 4. Createv
 
-### 3. Executanro a aplicação
+### 3. Executando a aplicação
 '''bash
 yarn dev
 '''
+
+### astronautas
