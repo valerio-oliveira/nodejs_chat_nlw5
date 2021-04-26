@@ -124,11 +124,26 @@ $ yarn typeorm migration:run
 
 ### 3. Create repository
 
-### 4. Createv
+### 4. Create service
 
-### 3. Executando a aplicação
+### 4. Create controller
+
+### 5. Update routes
+
+### 6. Add client modulo to the default path
+
+## 7. Install new modules
+
 '''bash
-yarn dev
+$ yarn add socket.io
+$ yarn add ejs
+$ yarn add socket.io-client
 '''
 
-### astronautas
+### 99. Executando a aplicação
+'''bash
+$ yarn dev
+'''
+
+###
+- 3. astronautas
