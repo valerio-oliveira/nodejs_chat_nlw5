@@ -11,7 +11,7 @@ const app = express();
 app.use(express.static(path.join(__dirname,"..","public")));    // uses views path
 app.set("views", path.join(__dirname,"..", "public"));          // set views path
 
-// changes the default views extension from ejs to html
+// changes the default engine from ejs to html
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "html");
 
@@ -23,11 +23,11 @@ app.get("/pages/client", (request, response) => {
 const http = createServer(app); // Creating http protool
 const io = new Server(http);    // Creating websocket protocol
 
-io.on("connection", (socket) => {
+io.on("connection", (socket: Socket) => {
     console.log("Socket connected ", socket.id);
 });
 
-app.use (express.json());
+app.use(express.json());
 
 app.use(routes);
 

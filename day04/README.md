@@ -134,9 +134,21 @@ $ yarn typeorm migration:run
 
 ## 7. Install new modules
 
+Socket.io + Types with development dependence:
+
 '''bash
 $ yarn add socket.io
+$ yarn add @types/socket.io -D
+'''
+
+Ejs module:
+'''bash
 $ yarn add ejs
+'''
+
+Socket.io Client:
+
+'''bash
 $ yarn add socket.io-client
 '''
 
